@@ -30,7 +30,7 @@ L https://raw.githubusercontent.com/jgonzalez34/android_RPi3_local_manifest/cm-1
 repo sync
 ```
 
-5. Apply [patches](https://github.com/lineage-rpi/android_local_manifest/tree/cm-14.1/patches):
+5. Apply [patches](https://github.com/lineage-rpi/android_local_manifest/tree/cm-14.1/patches) (optional):
 
 ```
 cd path/to/project
