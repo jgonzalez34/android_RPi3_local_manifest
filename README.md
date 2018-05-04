@@ -11,22 +11,32 @@ How to build:
 sudo apt-get install kpartx python-mako
 ```
 
-3. Initialize repo:
+3. Prep for repo:
+
+```
+mkdir -p ~/bin
+mkdir -p ~/android/lineage
+curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+chmod a+x ~/bin/repo
+```
+
+4. Initialize repo:
 
 ```
 repo init -u git://github.com/LineageOS/android.git -b cm-14.1
-curl --create-dirs -L -o .repo/local_manifests/manifest_brcm_rpi3.xml -O -L https://raw.githubusercontent.com/lineage-rpi/android_local_manifest/cm-14.1/manifest_brcm_rpi3.xml
+curl --create-dirs -L -o .repo/local_manifests/manifest_brcm_rpi3.xml -O -
+L https://raw.githubusercontent.com/jgonzalez34/android_RPi3_local_manifest/cm-14.1/manifest_brcm_rpi3.xml?token=AjM75drKI5FXrNqcF8-_hgaoBhIcHJ6Oks5a9NImwA%3D%3D
 repo sync
 ```
 
-4. Apply [patches](https://github.com/lineage-rpi/android_local_manifest/tree/cm-14.1/patches):
+5. Apply [patches](https://github.com/lineage-rpi/android_local_manifest/tree/cm-14.1/patches):
 
 ```
 cd path/to/project
 git am patchname.patch
 ```
 
-5. Compile:
+6. Compile:
 
 ```
 . build/envsetup.sh
@@ -34,7 +44,7 @@ lunch lineage_rpi3-userdebug
 mka kernel ramdisk systemimage
 ```
 
-6. Create writable image:
+7. Create writable image:
 
 ```
 cd device/brcm/rpi3
