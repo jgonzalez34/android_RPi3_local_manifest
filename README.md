@@ -10,8 +10,14 @@ How to build:
 ```
 sudo apt-get install kpartx python-mako
 ```
+3. Create directories for building:
 
-3. Prep for repo:
+```
+mkdir -p ~/bin
+mkdir -p ~/android/lineage
+```
+
+4. Prep for repo:
 
 ```
 mkdir -p ~/bin
@@ -21,7 +27,7 @@ curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 chmod a+x ~/bin/repo
 ```
 
-4. Initialize repo:
+5. Initialize repo:
 
 ```
 repo init -u git://github.com/LineageOS/android.git -b cm-14.1
@@ -30,14 +36,14 @@ L https://raw.githubusercontent.com/jgonzalez34/android_RPi3_local_manifest/cm-1
 repo sync
 ```
 
-5. Apply [patches](https://github.com/lineage-rpi/android_local_manifest/tree/cm-14.1/patches) (optional):
+6. Apply [patches](https://github.com/lineage-rpi/android_local_manifest/tree/cm-14.1/patches) (optional):
 
 ```
 cd path/to/project
 git am patchname.patch
 ```
 
-6. Compile:
+7. Compile:
 
 ```
 . build/envsetup.sh
@@ -45,7 +51,7 @@ lunch lineage_rpi3-userdebug
 mka kernel ramdisk systemimage
 ```
 
-7. Create writable image:
+8. Create writable image:
 
 ```
 cd device/brcm/rpi3
