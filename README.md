@@ -20,8 +20,6 @@ mkdir -p ~/android/lineage
 4. Prep for repo:
 
 ```
-mkdir -p ~/bin
-mkdir -p ~/android/lineage
 cd ~/android/lineage
 curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 chmod a+x ~/bin/repo
