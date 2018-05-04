@@ -16,6 +16,7 @@ sudo apt-get install kpartx python-mako
 ```
 mkdir -p ~/bin
 mkdir -p ~/android/lineage
+cd ~/android/lineage
 curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 chmod a+x ~/bin/repo
 ```
