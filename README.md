@@ -29,6 +29,7 @@ chmod a+x ~/bin/repo
 
 ```
 repo init -u git://github.com/LineageOS/android.git -b cm-14.1
+git pull https://github.com/jgonzalez34/android_RPi3_local_manifest
 curl --create-dirs -L -o .repo/local_manifests/manifest_brcm_rpi3.xml -O -L https://raw.githubusercontent.com/jgonzalez34/android_RPi3_local_manifest/cm-14.1/manifest_brcm_rpi3.xml?token=AjM75drKI5FXrNqcF8-_hgaoBhIcHJ6Oks5a9NImwA%3D%3D
 repo sync
 ```
